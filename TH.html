@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH - Tao ban co caro don gian</title>
+</head>
+<body>
+<h2>Caro Game Simple</h2>
+<p id="displayCaro"></p>
+<button type="button" onclick="changeValue()">Change Value</button>
+<br>
+<br>
+<script>
+    let board = [];
+    let displayCaro = document.getElementById('displayCaro')
+    for (let i = 0; i < 5; i++) {
+        board[i] = [0, 0, 0, 0, 0];
+        displayCaro.innerHTML += board[i].join(' ') + '<br>'
+    }
+    function changeValue() {
+        let x = prompt('Nhap toa do x')
+        let y = prompt('Nhap toa do y')
+        board[x][y] = 'x'
+        displayCaro.innerHTML = ''
+        for (let j = 0; j < 5; j++) {
+            displayCaro.innerHTML += board[j].join(' ') + '<br>'
+        }
+    }
+    // document.write(board[1].join(' ') + '<br>')
+    // document.write(board[2].join(' ') + '<br>')
+    // document.write(board[3].join(' ') + '<br>')
+    // document.write(board[4].join(' ') + '<br>')
+</script>
+</body>
+</html>
